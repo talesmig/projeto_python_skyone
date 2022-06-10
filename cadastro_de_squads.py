@@ -39,6 +39,9 @@ class Dev(Colaborador):
         print(f'---Cargo de {self.cargo} na squad {self.squad.nome}\n')
 
 
+print('\n-==-=-=-=-=-=-=-=-=-=-=-Sky.One Solutions=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
+print('Bem vindo ao sistema de cadastro de squads!\n')
+
 while True:
     squads = []
     nome_squad = input('\nNome da squad: ')
@@ -77,6 +80,8 @@ for squad in squads:
     for dev in squad.devs:
         dev.exibir()
     print(f'------------------------------{squad.nome}------------------------------')
+
+print('\n-==-=-=-=-=-=-=-=-=-=-=-Sky.One Solutions=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
 
 
 
