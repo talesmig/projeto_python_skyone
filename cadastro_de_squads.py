@@ -30,4 +30,3 @@ class Dev(Colaborador):
     def __int__(self, nome, fone, cargo, squad=None):
         super().__init__(nome, fone, squad)
         self.cargo = cargo
-
