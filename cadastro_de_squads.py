@@ -8,16 +8,16 @@ class Pessoa:
 
 
 class Squad:
-    def __init__(selfself, nome, techlead=None, devs=None):
+    def __init__(self, nome, techlead=None, devs=None):
         self.nome = nome
         self.devs = []
         self.techlead = techlead
 
-        def incluir_techlead(self, techlead):
-            self.techlead = techlead
+    def incluir_techlead(self, techlead):
+        self.techlead = techlead
 
-        def incluir_dev(self, dev):
-                self.devs.append(dev)
+    def incluir_dev(self, dev):
+        self.devs.append(dev)
 
 
 class Colaborador(Pessoa):
@@ -25,8 +25,8 @@ class Colaborador(Pessoa):
         super().__init__(nome, fone)
         self.squad = squad
 
-        def incluir_squad(self, squad):
-            self.squad = squad
+    def incluir_squad(self, squad):
+        self.squad = squad
 
 
 class Dev(Colaborador):
@@ -36,14 +36,15 @@ class Dev(Colaborador):
 
     def exibir(self):
         super().exibir()
-        print(f'---Cargo de {self.cargo} na squad {self.squad.nome}\n')
+        print(f'   Cargo de {self.cargo} na squad {self.squad.nome}\n')
 
+
+squads = []
 
 print('\n-==-=-=-=-=-=-=-=-=-=-=-Sky.One Solutions=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
 print('Bem vindo ao sistema de cadastro de squads!\n')
 
 while True:
-    squads = []
     nome_squad = input('\nNome da squad: ')
     nome_techlead = input('Nome do techlead da squad: ')
     fone_techlead = input('Telefone do techlead: ')
@@ -54,7 +55,6 @@ while True:
     techlead.incluir_squad(squad)
 
     squads.append(squad)
-
 
     while True:
         nome_dev = input('\nNome do desenvolvedor: ')
@@ -72,6 +72,8 @@ while True:
     if option in 'Nn':
         break
 
+print('-=' * 50)
+print('\nSquads criadas: ')
 
 for squad in squads:
     print(f'\n------------------------------{squad.nome}------------------------------')
@@ -82,7 +84,6 @@ for squad in squads:
     print(f'------------------------------{squad.nome}------------------------------')
 
 print('\n-==-=-=-=-=-=-=-=-=-=-=-Sky.One Solutions=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
-
 
 
 
