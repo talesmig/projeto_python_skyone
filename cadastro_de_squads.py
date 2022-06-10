@@ -32,20 +32,6 @@ class Dev(Colaborador):
         self.cargo = cargo
 
 
-squads = []
-nome_squad = input('\nNome da squad: ')
-nome_techlead = input('Nome do techlead da squad: ')
-fone_techlead = input('Telefone do techlead: ')
-
-
-squad = Squad(nome_squad)
-techlead = Colaborador(nome_techlead, fone_techlead)
-squad.incluir_techlead(techlead)
-techlead.incluir_squad(squad)
-
-squads.append(squad)
-
-
 while True:
     squads = []
     nome_squad = input('\nNome da squad: ')
@@ -59,17 +45,17 @@ while True:
 
     squads.append(squad)
 
-while True:
-    nome_dev = input('\nNome do desenvolvedor: ')
-    fone_dev = input('Telefone do desenvolvedor: ')
-    cargo_dev = input('Cargo do desenvolvedor: ')
-    dev = Dev(nome_dev, fone_dev, cargo_dev)
-    dev.incluir_squad(squad)
-    squad.incluir_dev(dev)
+    while True:
+        nome_dev = input('\nNome do desenvolvedor: ')
+        fone_dev = input('Telefone do desenvolvedor: ')
+        cargo_dev = input('Cargo do desenvolvedor: ')
+        dev = Dev(nome_dev, fone_dev, cargo_dev)
+        dev.incluir_squad(squad)
+        squad.incluir_dev(dev)
 
-    option = input('Deseja adicionar mais um dev [S/N]: ')
-    if option in 'Nn':
-        break
+        option = input('Deseja adicionar mais um dev [S/N]: ')
+        if option in 'Nn':
+            break
 
     option = input('\nDeseja adicionar mais uma squad [S/N]: ')
     if option in 'Nn':
