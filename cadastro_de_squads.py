@@ -14,7 +14,7 @@ class Squad:
             self.techlead = techlead
 
             def incluir_dev(self, dev):
-                self.devs.apped(dev)
+                self.devs.append(dev)
 
 
 class Colaborador(Pessoa):
