@@ -45,6 +45,7 @@ while True:
 
     squads.append(squad)
 
+
     while True:
         nome_dev = input('\nNome do desenvolvedor: ')
         fone_dev = input('Telefone do desenvolvedor: ')
@@ -61,6 +62,11 @@ while True:
     if option in 'Nn':
         break
 
+
+for squad in squads:
+    print(f'\n------------------------------{squad.nome}------------------------------')
+    print(f'TechLead: {squad.techlead.nome}')
+    print('\n-----Devs do squad-----')
 
 
 
