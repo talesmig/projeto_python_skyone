@@ -67,6 +67,9 @@ for squad in squads:
     print(f'\n------------------------------{squad.nome}------------------------------')
     print(f'TechLead: {squad.techlead.nome}')
     print('\n-----Devs do squad-----')
+    for dev in squad.devs:
+        dev.exibir()
+    print(f'------------------------------{squad.nome}------------------------------')
 
 
 
