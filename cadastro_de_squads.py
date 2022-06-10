@@ -3,6 +3,9 @@ class Pessoa:
         self.nome = nome
         self.fone = fone
 
+    def exibir(self):
+        print(f'-> {self.nome} - {self.fone}')
+
 
 class Squad:
     def __init__(selfself, nome, techlead=None, devs=None):
