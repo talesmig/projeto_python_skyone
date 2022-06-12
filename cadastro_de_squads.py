@@ -77,10 +77,23 @@ print('\nSquads criadas: ')
 
 for squad in squads:
     print(f'\n------------------------------{squad.nome}------------------------------')
-    print(f'TeachLead: {squad.techlead.nome}')
+    print(f'TechLead: {squad.techlead.nome}')
     print('\n-----Devs do squad-----')
     for dev in squad.devs:
         dev.exibir()
     print(f'------------------------------{squad.nome}------------------------------')
 
 print('\n-==-=-=-=-=-=-=-=-=-=-=-Sky.One Solutions=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
+
+
+
+
+
+
+
+
+
+
+
+
+
